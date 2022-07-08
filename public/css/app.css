@@ -17,3 +17,12 @@ nav li a {
 nav li a:hover {
   color: red;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  background: #f8f8f8;
+}
