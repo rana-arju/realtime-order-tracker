@@ -28,6 +28,13 @@ nav li a{
 .hero{
     background: $secondary;
 }
+.btn-primary{
+    background: $primary;
+    transition: $smooth;
+    &:hover{
+        background-color: $primary-hover;
+    }
+}
 .add-btn{
     text-transform: capitalize;
     border: 2px solid $primary;
@@ -38,4 +45,10 @@ nav li a{
         background-color: $primary;
         color: #fff;
     }
+}
+.cart-page{
+    background-color: $secondary;
+}
+.col-text{
+    color: $primary;
 }

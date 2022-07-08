@@ -26,6 +26,14 @@ nav li a:hover {
   background: #f8f8f8;
 }
 
+.btn-primary {
+  background: red;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #b23301;
+}
+
 .add-btn {
   text-transform: capitalize;
   border: 2px solid red;
@@ -36,4 +44,12 @@ nav li a:hover {
 .add-btn:hover {
   background-color: red;
   color: #fff;
+}
+
+.cart-page {
+  background-color: #f8f8f8;
+}
+
+.col-text {
+  color: red;
 }
