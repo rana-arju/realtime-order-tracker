@@ -1,6 +1,10 @@
 @import './variables';
 $primary: red;
 body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
@@ -17,10 +21,21 @@ nav li a{
         color: $primary;
     }
 }
-img{
-    width: 100%;
-    height: auto;
-}
+// img{
+//     width: 100%;
+//     height: auto;
+// }
 .hero{
     background: $secondary;
+}
+.add-btn{
+    text-transform: capitalize;
+    border: 2px solid $primary;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: $smooth;
+    &:hover{
+        background-color: $primary;
+        color: #fff;
+    }
 }
