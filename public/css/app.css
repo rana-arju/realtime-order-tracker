@@ -53,3 +53,14 @@ nav li a:hover {
 .col-text {
   color: red;
 }
+
+.login {
+  background: #f8f8f8;
+  min-height: calc(100vh - 86px);
+}
+.login a {
+  color: red;
+}
+.login a:hover {
+  color: #b23301;
+}

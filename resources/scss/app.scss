@@ -52,3 +52,13 @@ nav li a{
 .col-text{
     color: $primary;
 }
+.login{
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+    a{
+        color: $primary;
+        &:hover{
+            color: $primary-hover;
+        }
+    }
+}
