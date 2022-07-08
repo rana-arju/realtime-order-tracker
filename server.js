@@ -15,23 +15,7 @@ app.use(expressLayout);
 app.set("views", path.join(__dirname, "./resources/views"));
 app.set('view engine', 'ejs');
 
-//Home route
-app.get("/", (req, res) => {
-    res.render("home")
-})
-
-//cart route
-app.get("/cart", (req, res) => {
-    res.render("customers/cart")
-})
-//login route
-app.get("/login", (req, res) => {
-    res.render("auth/login")
-})
-//Register route
-app.get("/registration", (req, res) => {
-    res.render("auth/register")
-})
+require("./routes/web")(app)
 
 app.listen(port, () => {
     console.log("server is running on PORT: ", port);
