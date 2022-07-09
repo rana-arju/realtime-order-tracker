@@ -16,93 +16,22 @@
     <section class="menu container mx-auto py-8 px-2">
         <h2 class="text-2xl capitalize mb-8 ">All Pizza</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
+            <% foods.forEach(function(food){ %>
+
+            <!-- repeat block -->
+            <div class="border text-center py-4 rounded-lg">
+                <img src="/images/<%= food.image %>" alt="" class="h-40 mb-4 mx-auto">
                 <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
+                    <h3 class="mb-4 text-lg capitalize"><%= food.name %></h3>
+                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs "><%= food.size %></span>
                     <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
+                        <span class="font-bold text-lg">৳ <%= food.price %></span>
                         <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
                     </div>
                 </div>
             </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="border text-center py-4 rounded">
-                <img src="/images/pizza.png" alt="" class="h-40 mb-4 mx-auto">
-                <div>
-                    <h3 class="mb-4 text-lg capitalize">margherita</h3>
-                    <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs ">small</span>
-                    <div class="flex justify-evenly my-5">
-                        <span class="font-bold text-lg">$ 100</span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
-                    </div>
-                </div>
-            </div>
+            
+       <% }) %>
+  
         </div>
     </section>
