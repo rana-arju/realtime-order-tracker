@@ -26,7 +26,7 @@
                     <span class="py-1 px-4 rounded-full bg-slate-100 uppercase text-xs "><%= food.size %></span>
                     <div class="flex justify-evenly my-5">
                         <span class="font-bold text-lg">৳ <%= food.price %></span>
-                        <button  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
+                        <button data-food="<%= JSON.stringify(food) %>"  class="add-btn flex items-center font-bold gap-4"><span>+</span> <span>add to cart</span></button>
                     </div>
                 </div>
             </div>
