@@ -2489,7 +2489,15 @@ addToCart.forEach(function (btn) {
     var food = JSON.parse(btn.dataset.food);
     updateCart(food);
   });
-});
+}); // Remove alert message after X seconds
+
+var alertMsg = document.querySelector('#success-alert');
+
+if (alertMsg) {
+  setTimeout(function () {
+    alertMsg.remove();
+  }, 2000);
+}
 
 /***/ }),
 
