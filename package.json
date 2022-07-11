@@ -12,6 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
@@ -24,8 +26,8 @@
     "mongodb": "^4.7.0",
     "mongoose": "^6.4.4",
     "nodemon": "^2.0.19",
-    "noty": "^3.2.0-beta-deprecated",
-    "toastr": "^2.1.4"
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

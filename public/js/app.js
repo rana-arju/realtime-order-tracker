@@ -2480,12 +2480,7 @@ var cartCounter = document.querySelectorAll('.cartCounter');
 
 function updateCart(food) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', food).then(function (res) {
-    cartCounter[0].innerText = res.data.totalQty, // Display a success toast, with a title
-    new Noty({
-      type: 'success',
-      timeout: 1000,
-      text: 'Some notification text'
-    }).show();
+    cartCounter[0].innerText = res.data.totalQty; // Display a success toast, with a title
   });
 }
 

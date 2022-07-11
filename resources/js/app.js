@@ -4,14 +4,9 @@ let cartCounter = document.querySelectorAll('.cartCounter');
 function updateCart(food) {
     axios.post('/update-cart', food)
     .then(res => {
-        cartCounter[0].innerText= res.data.totalQty,
+        cartCounter[0].innerText= res.data.totalQty
         // Display a success toast, with a title
-        new Noty({
-            type: 'success',
-            timeout: 1000,
-            text: 'Some notification text'
-        
-        }).show();
+ 
     })
     
 }
