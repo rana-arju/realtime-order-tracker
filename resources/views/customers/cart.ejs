@@ -24,11 +24,17 @@
           <div class="text-right py-4">
             <h2 class="text-lg font-bold">Total amount: <span class="col-text">$ <%= session.cart.totalPrice %></span></h2>
             <div class="my-5">
-                <form action="">
-                    <input type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E] " placeholder="Your Name">
-                    <input type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Phone Number">
-                    <input type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Your Address">
-                    <button type="submit" class=" text-white font-bold uppercase border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 bg-[#FE5F1E]">Order Now</button>
+                <form action="/orders" method="POST">
+                    <% if (user) { %>
+                    <input name="name" type="text" value="<%= user.name %>" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E] " placeholder="Your Name">
+                    <input name="phone" type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Phone Number">
+                    <input name="address" type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Your Address">
+                    
+                        <button type="submit" class=" text-white font-bold uppercase border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 bg-[#FE5F1E]">Order Now</button>
+                    <% } else { %>
+                        <a href="/login" class="inline-block text-white font-bold uppercase border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 bg-[#FE5F1E] text-center">Login to continue</a>
+                    <% } %>
+                   
                 </form>
             </div>
           </div>
