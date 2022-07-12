@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { initAdmin } from './admin'
 let addToCart = document.querySelectorAll('.add-btn');
 let cartCounter = document.querySelectorAll('.cartCounter');
 function updateCart(food) {
@@ -23,3 +24,4 @@ if(alertMsg) {
         alertMsg.remove()
     }, 2000)
 }
+initAdmin();
