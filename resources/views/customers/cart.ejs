@@ -3,8 +3,8 @@
 <% if (session.cart) { %>
         <div class="container mx-auto orders my-2 py-8 w-1/2">
           <div class="flex items-center border-b border-gary-300 pb-4">
-              <img src="/images/cart-black.png" alt="" class="">
-              <h2 class="font-bold ml-4 text-2xl capitalize">order summary</h2>
+              <img src="/images/cart-black.png" alt="">
+              <h2 class="font-bold ml-4 text-lg md:text-2xl capitalize">order summary</h2>
           </div>
           <div class="order-list my-5">
             <% for( let food of Object.values(session.cart.items)) { %>
@@ -26,13 +26,13 @@
             <div class="my-5">
                 <form action="/orders" method="POST">
                     <% if (user) { %>
-                    <input name="name" type="text" value="<%= user.name %>" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E] " placeholder="Your Name">
-                    <input name="phone" type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Phone Number">
-                    <input name="address" type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Your Address">
+                    <input name="name" type="text" value="<%= user.name %>" class="border border-2 border-[#FE5F1E] py-2 px-4 w-full md:w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E] " placeholder="Your Name">
+                    <input name="phone" type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-full md:w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Phone Number">
+                    <input name="address" type="text" class="border border-2 border-[#FE5F1E] py-2 px-4 w-full md:w-1/2 rounded-full my-2 focus:outline-none focus:border-[#FE5F1E]" placeholder="Your Address">
                     
-                        <button type="submit" class=" text-white font-bold uppercase border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 bg-[#FE5F1E]">Order Now</button>
+                        <button type="submit" class=" text-white font-bold uppercase border border-2 border-[#FE5F1E] py-2 px-4 w-full md:w-1/2 rounded-full my-2 bg-[#FE5F1E]">Order Now</button>
                     <% } else { %>
-                        <a href="/login" class="inline-block text-white font-bold uppercase border border-2 border-[#FE5F1E] py-2 px-4 w-1/2 rounded-full my-2 bg-[#FE5F1E] text-center">Login to continue</a>
+                        <a href="/login" class="inline-block text-white text-sm md:text-lg md:font-bold uppercase border border-2 border-[#FE5F1E] py-2 sm:px-2 md:px-4 w-full md:w-1/2 rounded-full my-2 bg-[#FE5F1E] text-center">Login to continue</a>
                     <% } %>
                    
                 </form>
